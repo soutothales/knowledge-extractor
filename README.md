@@ -1,7 +1,7 @@
 # LLM Knowledge Extractor – README
 
 ## Overview
-LLM Knowledge Extractor is a FastAPI microservice that ingests unstructured text, summarizes it with an LLM (OpenAI, Anthropic, or a mock), derives topics and sentiment, computes top‑3 noun keywords locally (rule‑based), and persists results to Supabase. It exposes two endpoints: `POST /analyze` and `GET /search?topic=...`.
+LLM Knowledge Extractor is a FastAPI microservice that ingests unstructured text, summarizes it with an LLM (Ollama, OpenAI, Anthropic, or a mock), derives topics and sentiment, computes top‑3 noun keywords locally (rule‑based), and persists results to Supabase. It exposes two endpoints: `POST /analyze` and `GET /search?topic=...`.
 
 ---
 
@@ -103,7 +103,7 @@ I followed that modular project structure to keep the codebase clean, maintainab
 
 - `main.py`: Entry point; initializes FastAPI app and includes routes.
 
-- `config.py` → Centralized environment/configuration management and Supabase client setup.
+- `config.py`: Centralized environment/configuration management and Supabase client setup.
 
 - `spacy_pipeline.py`: Loads optional spaCy NLP model for better tokenization and POS tagging.
 
